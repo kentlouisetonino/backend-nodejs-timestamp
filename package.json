@@ -13,9 +13,6 @@
     "type": "git",
     "url": "https://github.com/kentlouisetonino/api-timestamp-microservice.git"
   },
-  "bugs": {
-    "url": "https://github.com/freeCodeCamp/freeCodeCamp/issues"
-  },
   "homepage": "https://github.com/kentlouisetonino/api-timestamp-microservice#readme",
   "license": "MIT"
 }
