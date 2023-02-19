@@ -26,8 +26,11 @@ app.get("/api/hello", function (req, res) {
 // * [project url]/api/2015-12-25
 app.get("/api/:date", (req, res) => {
   const dateParam = req.params.date;
-
-  if (dateParam.includes("-")) {
+  if (!dateParam) {
+    const dateToday = new Date();
+    const unixTimestamp = new date.getTime() / 1000;
+    res.json({ unix: unixTimestamp, utc: dateToday.toUTCString() });
+  } else if (dateParam.includes("-")) {
     const date = new Date(dateParam);
     const unixTimestamp = new date.getTime() / 1000;
     res.json({ unix: unixTimestamp, utc: date.toUTCString() });
@@ -36,7 +39,7 @@ app.get("/api/:date", (req, res) => {
     const utcDate = date.toUTCString();
 
     if (utcDate === "Invalid Date") {
-      res.send({ error: "Invalid Date" });
+      res.json({ error: "Invalid Date" });
     } else {
       res.json({ unix: dateParam, utc: utcDate });
     }
