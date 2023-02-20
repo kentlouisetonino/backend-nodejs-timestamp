@@ -30,8 +30,6 @@ URL: http://localhost:11000/api/2015-12-25
 URL: http://localhost:11000/api/1451001600000
 ```
 
-> - Delete a file.
-
 <br />
 
 ## Recording
