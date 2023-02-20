@@ -1,3 +1,38 @@
-# Timestamp Microservice
+## Description
 
-This is the boilerplate code for the Timestamp Microservice project. Instructions for building your project can be found at https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/timestamp-microservice
+> A server-side application that allows you to process the timestamp parameter. This is my final solution of the FreeCodeCamp Timestamp Mircoservice challenge. Feel free to clone and tinker. 🤘🍻
+
+> FreeCodeCamp: https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/timestamp-microservice
+
+<br />
+
+## Technology Stack
+
+> [ExpressJS](https://www.npmjs.com/package/express) • [Nodemon](https://www.npmjs.com/package/nodemon) • [TS Node](https://www.npmjs.com/package/ts-node) • [TypeScript](https://www.npmjs.com/package/ts-node) • [REST APIs](https://restfulapi.net/) • [Prettier](https://www.npmjs.com/package/prettier) • [NodeJS](https://nodejs.org/docs/latest-v16.x/api/)
+
+<br />
+
+## Setup
+
+> - Run the following commands.
+
+```bash
+npm run build
+npm run dev
+```
+
+> - Testing
+
+```bash
+URL: http://localhost:11000/api/2015-12-25
+URL: http://localhost:11000/api/1451001600000
+```
+
+> - Delete a file.
+
+## Recording
+
+
+https://user-images.githubusercontent.com/69438999/217460437-453a250e-9770-42de-8eb6-0f015c378e65.mp4
+
+
