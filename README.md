@@ -26,8 +26,9 @@ npm run dev
 > - Testing
 
 ```bash
-URL: http://localhost:11000/api/2015-12-25
-URL: http://localhost:11000/api/1451001600000
+Method: GET
+URL: http://localhost:11000/api/:timestamp?
+Params: { "timestamp": "value here" }
 ```
 
 <br />
