@@ -1,52 +1,88 @@
-// index.js
-// where your node app starts
+require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
 
-// init project
-var express = require("express");
-var app = express();
+const PORT = process.env.PORT;
+const app = express();
 
-// enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
-// so that your API is remotely testable by FCC
-var cors = require("cors");
-app.use(cors({ optionsSuccessStatus: 200 })); // some legacy browsers choke on 204
+// * listen for requests
+app.listen(PORT, function () {
+  console.log("Your app is listening on port " + PORT);
+});
 
-// http://expressjs.com/en/starter/static-files.html
-app.use(express.static("public"));
+// * middlewares
+app.use(cors({ optionsSuccessStatus: 200 })); // * some legacy browsers choke on 204
+app.use(express.static("public")); // * http://expressjs.com/en/starter/static-files.html
 
-// http://expressjs.com/en/starter/basic-routing.html
+// * endpoints
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/views/index.html");
 });
-
-// your first API endpoint...
 app.get("/api/hello", function (req, res) {
   res.json({ greeting: "hello API" });
 });
-
-// * [project url]/api/2015-12-25
-app.get("/api/:date", (req, res) => {
+app.get("/api/:date?", (req, res) => {
   const dateParam = req.params.date;
-  if (!dateParam) {
-    const dateToday = new Date();
-    const unixTimestamp = new date.getTime() / 1000;
-    res.json({ unix: unixTimestamp, utc: dateToday.toUTCString() });
-  } else if (dateParam.includes("-")) {
-    const date = new Date(dateParam);
-    const unixTimestamp = new date.getTime() / 1000;
-    res.json({ unix: unixTimestamp, utc: date.toUTCString() });
-  } else {
-    const date = new Date(dateParam * 1000);
-    const utcDate = date.toUTCString();
 
-    if (utcDate === "Invalid Date") {
-      res.json({ error: "Invalid Date" });
+  // * if parameter is valid
+  if (dateParam) {
+    if (dateParam.match(/[a-z]/i)) {
+      const date = new Date(dateParam);
+      const utc = date.toUTCString();
+
+      if (utc === "Invalid Date") {
+        res.json({ error: "Invalid Date" });
+      } else {
+        res.json({ unix: date.getTime(), utc: utc });
+      }
     } else {
-      res.json({ unix: dateParam, utc: utcDate });
+      const newDate = new Date(Number(dateParam));
+      res.json({ utc: Number(dateParam), utc: newDate.toUTCString() });
     }
+  } else {
+    res.json({ utc: "test" });
   }
 });
+app.get("/api/:date?", (req, res) => {
+  const paramDate = req.params.date;
+  const validDate = Date.parse(paramDate);
 
-// listen for requests :)
-var listener = app.listen(process.env.PORT, function () {
-  console.log("Your app is listening on port " + listener.address().port);
+  // * if paramDate is not empty
+  // * if paramDate is is not valid
+  // * if paramDate is not a number
+  if (paramDate && !validDate && !Number(paramDate)) {
+    return res.json({
+      error: "Invalid Date",
+    });
+  }
+
+  // * if paramDate is not empty
+  // * if not a valid date
+  // * if in milliseconds
+  if (paramDate && !validDate && Number(paramDate)) {
+    const date = new Date(Number(paramDate));
+
+    return res.json({
+      unix: date.getTime(),
+      utc: date.toUTCString(),
+    });
+  }
+
+  // * if paramDate is empty
+  if (!paramDate) {
+    const dateToday = new Date();
+
+    return res.json({
+      unix: Date.now(),
+      utc: dateToday.toUTCString(),
+    });
+  }
+
+  // * if paramDate is valid date
+  const date = new Date(paramDate);
+
+  return res.json({
+    unix: date.getTime(),
+    utc: date.toUTCString(),
+  });
 });
