@@ -1,6 +1,6 @@
 ## Description
 
-> A server-side application that allows you to process the timestamp parameter. This is my final solution of the FreeCodeCamp Timestamp Mircoservice challenge. Feel free to clone and tinker. 🤘🍻
+> A server-side application that allows you to process the timestamp parameter. This is my final solution of the FreeCodeCamp Timestamp Mircoservice challenge. Feel free to clone and tinker.
 
 > References:
 > - https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/timestamp-microservice
