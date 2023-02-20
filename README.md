@@ -28,7 +28,7 @@ npm run dev
 ```bash
 Method: GET
 URL: http://localhost:11000/api/:timestamp?
-Params: { "timestamp": "value here" }
+Path Variables: { "timestamp": "value here" }
 ```
 
 <br />
