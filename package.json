@@ -1,7 +1,10 @@
 {
-  "name": "api-timestamp-microservice",
+  "name": "backend-nodejs-timestamp",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "server.js",
+  "author": "Kent Louise Tonino",
+  "repository": "https://github.com/kentlouisetonino/backend-nodejs-timestamp",
+  "homepage": "https://github.com/kentlouisetonino/backend-nodejs-timestamp#readme",
   "scripts": {
     "build": "tsc --build",
     "start": "tsc --build && node ./dist/server.js",
@@ -23,11 +26,5 @@
     "prettier": "^2.8.4",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kentlouisetonino/api-timestamp-microservice.git"
-  },
-  "homepage": "https://github.com/kentlouisetonino/api-timestamp-microservice#readme",
-  "license": "MIT"
+  }
 }
