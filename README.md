@@ -1,6 +1,6 @@
 ## Description
-> - A backend application that allows you to process the timestamp parameter. Main technology
-    stack are REST APIs, ExpressJS, TypeScript, and NodeJS.
+> - A backend application that allows you to process the timestamp parameter. The technologies
+    are REST APIs, ExpressJS, TypeScript, and NodeJS.
 
 <br />
 
