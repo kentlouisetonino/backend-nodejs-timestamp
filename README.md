@@ -4,14 +4,6 @@
 
 <br />
 
-> - This is my final solution of the FreeCodeCamp Timestamp Mircoservice challenge.
-
-<br />
-
-> - Reference: https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/timestamp-microservice
-
-<br />
-
 [Screencast from Monday, 20 February, 2023 08:56:25 PM PST.webm](https://user-images.githubusercontent.com/69438999/220115409-cc0a439a-8540-474f-ab12-aba08633c494.webm)
 
 <br />
