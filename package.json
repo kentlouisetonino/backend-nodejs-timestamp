@@ -1,7 +1,7 @@
 {
   "name": "backend-nodejs-timestamp",
   "version": "0.0.1",
-  "main": "server.js",
+  "main": "src/server.ts",
   "author": "Kent Louise Tonino",
   "repository": "https://github.com/kentlouisetonino/backend-nodejs-timestamp",
   "homepage": "https://github.com/kentlouisetonino/backend-nodejs-timestamp#readme",
