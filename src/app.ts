@@ -16,4 +16,3 @@ app.use('/', HomeRouter)
 app.use('/api', TimestampRouter)
 
 export default app
-

@@ -7,4 +7,3 @@ const PORT = process.env.PORT
 app.listen(PORT, function () {
   console.log(`Server: http://localhost:${PORT}`)
 })
-
