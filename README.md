@@ -1,6 +1,14 @@
 ## Description
 > - A backend application that allows you to process the timestamp parameter. The technologies
-    are REST APIs, ExpressJS, TypeScript, and NodeJS.
+    are REST APIs, ExpressJS, Jest (Unit Testing), TypeScript, and NodeJS.
+
+<br />
+
+
+
+https://github.com/kentlouisetonino/backend-nodejs-timestamp/assets/69438999/61d49d02-0a25-48ea-83cd-d37c4f78d6f2
+
+
 
 <br />
 <br />
