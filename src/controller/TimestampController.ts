@@ -4,18 +4,18 @@ export const TimestampController = async (req: Request, res: Response) => {
   const paramTimestamp = req.params.timestamp;
   const validDate = Date.parse(paramTimestamp);
 
-  // * if paramTimestamp is not empty
-  // * if validDate is is not valid
-  // * if paramTimestamp is not a number
+  // If paramTimestamp is not empty.
+  // If validDate is is not valid.
+  // If paramTimestamp is not a number.
   if (paramTimestamp && !validDate && !Number(paramTimestamp)) {
     return res.json({
       error: 'Invalid Date',
     });
   }
 
-  // * if paramTimestamp is not empty
-  // * if validDate not a valid date
-  // * if paramTimestamp in milliseconds
+  // If paramTimestamp is not empty.
+  // If validDate not a valid date.
+  // If paramTimestamp in milliseconds.
   if (paramTimestamp && !validDate && Number(paramTimestamp)) {
     const date = new Date(Number(paramTimestamp));
 
@@ -25,7 +25,7 @@ export const TimestampController = async (req: Request, res: Response) => {
     });
   }
 
-  // * if paramTimestamp is empty
+  // If paramTimestamp is empty.
   if (!paramTimestamp) {
     const dateToday = new Date();
 
@@ -35,7 +35,7 @@ export const TimestampController = async (req: Request, res: Response) => {
     });
   }
 
-  // * if paramTimestamp is valid date
+  // If paramTimestamp is valid date.
   const date = new Date(paramTimestamp);
 
   return res.json({
