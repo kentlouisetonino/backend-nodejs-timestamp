@@ -21,9 +21,13 @@ https://github.com/kentlouisetonino/backend-nodejs-timestamp/assets/69438999/61d
 > - Run the following commands.
 
 ```bash
+# Development scripts.
 yarn install
 yarn build
 yarn dev
+
+# Unit testing script.
+yarn tests
 ```
 
 <br />
