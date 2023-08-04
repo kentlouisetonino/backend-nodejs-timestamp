@@ -1,8 +1,8 @@
-import express from 'express'
-import { TimestampController } from '../controller/TimestampController'
+import express from 'express';
+import { TimestampController } from '../controller/TimestampController';
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/:timestamp?', TimestampController)
+router.get('/:timestamp?', TimestampController);
 
-export default router
+export default router;

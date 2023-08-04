@@ -1,9 +1,9 @@
-require('dotenv').config()
-import app from './app'
+require('dotenv').config();
+import app from './app';
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT;
 
-// * listen for requests
+// Server listener.
 app.listen(PORT, function () {
-  console.log(`Server: http://localhost:${PORT}`)
-})
+  console.log(`Server: http://localhost:${PORT}`);
+});

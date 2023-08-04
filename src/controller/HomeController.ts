@@ -1,5 +1,5 @@
-import { Request, Response } from 'express'
+import { Request, Response } from 'express';
 
 export const HomeController = async (_: Request, res: Response) => {
-  res.sendFile('index.html')
-}
+  return res.sendFile('index.html');
+};
