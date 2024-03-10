@@ -1,5 +1,5 @@
 {
-  "name": "backend-nodejs-timestamp",
+  "name": "node-timestamp",
   "version": "0.0.1",
   "main": "src/server.ts",
   "author": "Kent Louise Tonino",
